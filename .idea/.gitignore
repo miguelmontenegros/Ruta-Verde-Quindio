@@ -1,0 +1,14 @@
+# Compilación de Maven (archivos generados y ejecutables)
+target/
+*.class
+
+# Configuración del IDE (IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db

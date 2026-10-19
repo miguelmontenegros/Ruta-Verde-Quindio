@@ -1,4 +1,4 @@
-package co.edu.uniquindio.demo;
+package co.edu.uniquindio.rutaverde;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

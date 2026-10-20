@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox styleClass="panel" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.rutaverde.controlador.ClientesControlador">
+    <VBox styleClass="tarjeta" prefWidth="340" minWidth="320">
+        <Label text="Cliente" styleClass="seccion"/>
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints minWidth="120"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+            <Label text="Documento" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtDocumento" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Nombre completo" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtNombre" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Teléfono" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtTelefono" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Correo" GridPane.rowIndex="3"/>
+            <TextField fx:id="txtCorreo" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="País de origen" GridPane.rowIndex="4"/>
+            <TextField fx:id="txtPais" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <Label text="Idioma preferido" GridPane.rowIndex="5"/>
+            <TextField fx:id="txtIdioma" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        </GridPane>
+        <HBox spacing="8">
+            <Button text="Agregar" styleClass="primario" onAction="#onAgregar"/>
+            <Button text="Actualizar" onAction="#onActualizar"/>
+            <Button text="Eliminar" onAction="#onEliminar"/>
+            <Button text="Limpiar" onAction="#onLimpiar"/>
+        </HBox>
+    </VBox>
+    <TableView fx:id="tblClientes" HBox.hgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colDocumento" text="Documento"/>
+            <TableColumn fx:id="colNombre" text="Nombre"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono"/>
+            <TableColumn fx:id="colCorreo" text="Correo"/>
+            <TableColumn fx:id="colPais" text="País"/>
+            <TableColumn fx:id="colIdioma" text="Idioma"/>
+        </columns>
+        <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+    </TableView>
+</HBox>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.rutaverde.controlador.PrincipalControlador"
+            stylesheets="@estilos.css">
+    <top>
+        <VBox styleClass="encabezado" spacing="2">
+            <Label fx:id="lblAgencia" styleClass="titulo"/>
+            <Label fx:id="lblDatosAgencia"/>
+        </VBox>
+    </top>
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Reservas">
+                <content><fx:include fx:id="reservas" source="ReservasVista.fxml"/></content>
+            </Tab>
+            <Tab text="Paquetes">
+                <content><fx:include fx:id="paquetes" source="PaquetesVista.fxml"/></content>
+            </Tab>
+            <Tab text="Actividades">
+                <content><fx:include fx:id="actividades" source="ActividadesVista.fxml"/></content>
+            </Tab>
+            <Tab text="Clientes">
+                <content><fx:include fx:id="clientes" source="ClientesVista.fxml"/></content>
+            </Tab>
+            <Tab text="Guías">
+                <content><fx:include fx:id="guias" source="GuiasVista.fxml"/></content>
+            </Tab>
+            <Tab text="Reportes">
+                <content><fx:include fx:id="reportes" source="ReportesVista.fxml"/></content>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

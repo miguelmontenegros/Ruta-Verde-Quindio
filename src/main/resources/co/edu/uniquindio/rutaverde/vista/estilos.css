@@ -1,0 +1,82 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-base: #ffffff;
+    -fx-background-color: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-accent: #000000;
+    -fx-focus-color: #000000;
+    -fx-faint-focus-color: transparent;
+    -fx-text-base-color: #000000;
+}
+
+.encabezado {
+    -fx-padding: 10 16 10 16;
+    -fx-border-color: transparent transparent #000000 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+.titulo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.panel {
+    -fx-padding: 12;
+    -fx-spacing: 12;
+}
+
+.tarjeta {
+    -fx-border-color: #000000;
+    -fx-padding: 12;
+    -fx-spacing: 8;
+}
+
+.seccion {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.dato {
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.button:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+.button.primario {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.button.primario:hover {
+    -fx-background-color: #333333;
+}
+
+.tab-pane .tab {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-width: 1 1 0 1;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #000000;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #ffffff;
+}
+
+.voucher {
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 12px;
+}

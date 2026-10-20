@@ -8,12 +8,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class RutaVerdeApp extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(RutaVerdeApp.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader loader = new FXMLLoader(RutaVerdeApp.class.getResource("/co/edu/uniquindio/rutaverde/vista/PrincipalVista.fxml"));
+        Scene scene = new Scene(loader.load(), 1180, 720);
+        stage.setTitle("RutaVerde Quindío - Gestión de reservas");
         stage.setScene(scene);
+        stage.setMaximized(true);
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 }

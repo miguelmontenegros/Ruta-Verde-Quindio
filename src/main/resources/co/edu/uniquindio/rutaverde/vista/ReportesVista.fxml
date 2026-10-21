@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox styleClass="panel" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.rutaverde.controlador.ReportesControlador">
+    <VBox styleClass="tarjeta" prefWidth="420" minWidth="380">
+        <Label text="Ingresos por periodo" styleClass="seccion"/>
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints minWidth="100"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+            <Label text="Fecha inicial" GridPane.rowIndex="0"/>
+            <DatePicker fx:id="dpInicio" maxWidth="Infinity" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Fecha final" GridPane.rowIndex="1"/>
+            <DatePicker fx:id="dpFin" maxWidth="Infinity" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        </GridPane>
+        <Button text="Generar reporte" styleClass="primario" onAction="#onGenerar"/>
+        <Label fx:id="lblResultado" styleClass="dato" wrapText="true"/>
+    </VBox>
+</HBox>

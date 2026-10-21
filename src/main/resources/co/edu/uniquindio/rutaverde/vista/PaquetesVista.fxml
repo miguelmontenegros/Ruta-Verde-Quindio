@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox styleClass="panel" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.rutaverde.controlador.PaquetesControlador">
+    <VBox styleClass="tarjeta" prefWidth="300" minWidth="280">
+        <Label text="Nuevo paquete" styleClass="seccion"/>
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints minWidth="95"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+            <Label text="Código" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtCodigo" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Nombre" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtNombre" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Descuento %" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtDescuento" promptText="0 a 20" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+        <HBox spacing="8">
+            <Button text="Crear" styleClass="primario" onAction="#onCrear"/>
+            <Button text="Eliminar seleccionado" onAction="#onEliminar"/>
+        </HBox>
+        <Label text="Paquetes" styleClass="seccion"/>
+        <ListView fx:id="lstPaquetes" VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+    <VBox styleClass="tarjeta" HBox.hgrow="ALWAYS">
+        <Label text="Contenido del paquete" styleClass="seccion"/>
+        <TreeView fx:id="treeComposicion" VBox.vgrow="ALWAYS"/>
+        <HBox spacing="8">
+            <ComboBox fx:id="cmbComponente" HBox.hgrow="ALWAYS" maxWidth="Infinity" promptText="Actividad o paquete"/>
+            <Button text="Agregar al paquete" styleClass="primario" onAction="#onAgregarComponente"/>
+        </HBox>
+    </VBox>
+
+    <VBox styleClass="tarjeta" prefWidth="300" minWidth="280">
+        <Label text="Consulta" styleClass="seccion"/>
+        <Label fx:id="lblConsulta" wrapText="true"/>
+        <Label text="Actividades incluidas"/>
+        <ListView fx:id="lstActividades" VBox.vgrow="ALWAYS"/>
+    </VBox>
+</HBox>

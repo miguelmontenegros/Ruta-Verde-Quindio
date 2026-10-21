@@ -1,39 +1,36 @@
+# Compilación y archivos generados por Maven
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-.kotlin
+*.class
+out/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
+# Configuración de IntelliJ IDEA (Completa)
+.idea/
 *.iml
+*.iws
 *.ipr
 
-### Eclipse ###
+# Archivos de Kotlin/Gradle
+.kotlin/
+build/
+
+# Configuración de otros IDEs (Eclipse, NetBeans, VS Code)
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
-
-### NetBeans ###
-/nbproject/private/
+/nbproject/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
 .vscode/
 
-### Mac OS ###
+# Archivos del sistema operativo
 .DS_Store
+Thumbs.db
+
+# Wrapper de Maven
+!.mvn/wrapper/maven-wrapper.jar

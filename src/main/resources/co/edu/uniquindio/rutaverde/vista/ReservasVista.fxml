@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox styleClass="panel" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.rutaverde.controlador.ReservasControlador">
+    <VBox styleClass="tarjeta" prefWidth="380" minWidth="360">
+        <Label text="Nueva reserva" styleClass="seccion"/>
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints minWidth="105"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+            <Label text="Canal" GridPane.rowIndex="0"/>
+            <ComboBox fx:id="cmbCanal" maxWidth="Infinity" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Cliente *" GridPane.rowIndex="1"/>
+            <ComboBox fx:id="cmbCliente" maxWidth="Infinity" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Producto *" GridPane.rowIndex="2"/>
+            <ComboBox fx:id="cmbProducto" maxWidth="Infinity" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Fecha del viaje *" GridPane.rowIndex="3"/>
+            <DatePicker fx:id="dpFecha" maxWidth="Infinity" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Label text="Viajeros *" GridPane.rowIndex="4"/>
+            <Spinner fx:id="spnViajeros" maxWidth="Infinity" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            <Label text="Guía" GridPane.rowIndex="5"/>
+            <HBox spacing="6" GridPane.rowIndex="5" GridPane.columnIndex="1">
+                <ComboBox fx:id="cmbGuia" HBox.hgrow="ALWAYS" maxWidth="Infinity" promptText="Sin guía"/>
+                <Button text="Quitar" minWidth="70" onAction="#onQuitarGuia"/>
+            </HBox>
+            <Label text="Servicios" GridPane.rowIndex="6"/>
+            <VBox spacing="4" GridPane.rowIndex="6" GridPane.columnIndex="1">
+                <CheckBox fx:id="chkTransporte" text="Transporte desde el hotel"/>
+                <CheckBox fx:id="chkSeguro" text="Seguro de viaje"/>
+            </VBox>
+            <Label text="Observaciones" GridPane.rowIndex="7"/>
+            <TextArea fx:id="txtObservaciones" prefRowCount="2" wrapText="true" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+            <Label text="Tarjeta *" GridPane.rowIndex="8"/>
+            <TextField fx:id="txtTarjeta" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+        </GridPane>
+        <HBox spacing="8">
+            <Button text="Calcular valor" onAction="#onCalcular"/>
+            <Button text="Confirmar reserva" styleClass="primario" onAction="#onConfirmar"/>
+            <Button text="Limpiar" onAction="#onLimpiar"/>
+        </HBox>
+        <Label fx:id="lblResumen" styleClass="voucher" wrapText="true"/>
+    </VBox>
+
+    <VBox spacing="12" HBox.hgrow="ALWAYS">
+        <VBox styleClass="tarjeta" VBox.vgrow="ALWAYS">
+            <Label text="Resultado y correo enviado al cliente" styleClass="seccion"/>
+            <TextArea fx:id="txtResultado" editable="false" wrapText="true" styleClass="voucher" VBox.vgrow="ALWAYS"/>
+        </VBox>
+        <VBox styleClass="tarjeta" VBox.vgrow="ALWAYS">
+            <Label text="Reservas confirmadas" styleClass="seccion"/>
+            <TableView fx:id="tblReservas" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colNumero" text="Número"/>
+                    <TableColumn fx:id="colCliente" text="Cliente"/>
+                    <TableColumn fx:id="colProducto" text="Producto"/>
+                    <TableColumn fx:id="colFecha" text="Fecha viaje"/>
+                    <TableColumn fx:id="colViajeros" text="Viajeros"/>
+                    <TableColumn fx:id="colValor" text="Valor"/>
+                </columns>
+                <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+            </TableView>
+        </VBox>
+    </VBox>
+</HBox>
